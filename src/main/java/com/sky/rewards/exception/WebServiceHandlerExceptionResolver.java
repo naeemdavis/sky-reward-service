@@ -4,7 +4,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver;
 
@@ -16,6 +15,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class WebServiceHandlerExceptionResolver extends AbstractHandlerExceptionResolver implements InitializingBean {
 
+    @SuppressWarnings("unused")
     private ObjectMapper jsonObjectMapper;
 
 
