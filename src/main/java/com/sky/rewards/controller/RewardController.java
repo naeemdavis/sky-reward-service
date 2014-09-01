@@ -17,20 +17,18 @@ import com.sky.rewards.services.RewardService;
 @Controller
 @RequestMapping("/rewards")
 public class RewardController {
-	
-	
+
+
 	@Autowired
     private RewardService rewardService;
-	
+
     /**
      * get rewards
      */
-    @RequestMapping( value = {"/account/{accountId}"}, method = RequestMethod.POST,headers = {"Content-type=application/json"})
+    @RequestMapping( value = {"/account/{accountId}"}, method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.OK)
-    public @ResponseBody Reward getReward(@PathVariable Integer accountId, @RequestBody Portfolio portfolio) {
+    public @ResponseBody Reward getReward(@PathVariable Integer accountId, Portfolio portfolio) {
         return rewardService.getRewards(accountId, portfolio);
     }
-	
 
 }
- 
