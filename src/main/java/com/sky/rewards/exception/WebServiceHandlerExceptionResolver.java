@@ -4,10 +4,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.exc.InvalidFormatException;
 
 
 
@@ -28,8 +31,18 @@ public class WebServiceHandlerExceptionResolver extends AbstractHandlerException
     @Override
     protected ModelAndView doResolveException(HttpServletRequest request, HttpServletResponse response, Object handler,
                     Exception ex) {
-        // TODO Auto-generated method stub
-        return null;
+
+        if (ex instanceof HttpMessageNotReadableException) {
+            Throwable cause = ex.getCause();
+            if (cause instanceof InvalidFormatException) {
+
+            } else {
+                //400 (Bad Request) - request is not valid
+
+            }
+        }
+
+            return null;
     }
 
 

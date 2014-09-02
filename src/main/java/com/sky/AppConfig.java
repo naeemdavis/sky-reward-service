@@ -35,7 +35,8 @@ public class AppConfig extends WebMvcConfigurerAdapter {
     */
     @Bean
     public ObjectMapper mapper() {
-        return new ObjectMapper();
+        ObjectMapper objectMapper = new ObjectMapper();
+        return objectMapper;
     }
 
     @Bean

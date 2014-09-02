@@ -4,6 +4,8 @@ import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+
 public enum ChannelType {
 
     SPORTS(1, "SPORTS"),
@@ -46,5 +48,13 @@ public enum ChannelType {
     public String getDescription() {
         return description;
     }
+
+
+    @JsonCreator
+    public static ChannelType fromValue(String v) {
+        return valueOf(v);
+    }
+
+
 
 }

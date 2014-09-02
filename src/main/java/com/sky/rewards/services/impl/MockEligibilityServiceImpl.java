@@ -11,12 +11,12 @@ import com.sky.rewards.type.ResultCodeType;
 public class MockEligibilityServiceImpl implements EligibilityService {
 
     public EligibleType getAccountElgibiltyByAccountId(Integer accountId) {
-    	
-        if(accountId.equals("1")){
+
+        if(accountId==1){
             return EligibleType.CUSTOMER_ELIGIBLE;
-        }else if(accountId.equals("2")){
+        }else if(accountId==2){
             return EligibleType.CUSTOMER_INELIGIBLE;
-        }else if(accountId.equals("3")){
+        }else if(accountId==3){
             throw new SkyServiceException(ResultCodeType.INVALID_ACCOUNT);
         }else{
             throw new SkyServiceException(ResultCodeType.INTERNAL_ERROR);
