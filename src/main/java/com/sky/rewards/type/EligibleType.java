@@ -1,5 +1,5 @@
 
-package com.highstreet.checkout.type;
+package com.sky.rewards.type;
 
 import java.util.EnumSet;
 import java.util.HashMap;

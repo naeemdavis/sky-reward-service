@@ -1,4 +1,4 @@
-package com.highstreet;
+package com.sky;
 
 import java.util.ArrayList;
 
@@ -11,10 +11,10 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.highstreet.checkout.exception.WebServiceHandlerExceptionResolver;
+import com.sky.rewards.exception.WebServiceHandlerExceptionResolver;
 
 @Configuration
-@ComponentScan({"com.highstreet"})
+@ComponentScan({"com.sky"})
 @EnableWebMvc
 public class AppConfig extends WebMvcConfigurerAdapter {
 

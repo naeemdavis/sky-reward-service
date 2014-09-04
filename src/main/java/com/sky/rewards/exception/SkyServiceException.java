@@ -1,9 +1,9 @@
-package com.highstreet.checkout.exception;
+package com.sky.rewards.exception;
 
-import com.highstreet.checkout.type.ResultCodeType;
+import com.sky.rewards.type.ResultCodeType;
 
 
-public class CheckoutServiceException extends RuntimeException {
+public class SkyServiceException extends RuntimeException {
 
     private static final long serialVersionUID = 1L;
 
@@ -15,7 +15,7 @@ public class CheckoutServiceException extends RuntimeException {
      * @param resultCode
      * @param message
      */
-    public CheckoutServiceException(ResultCodeType resultCode) {
+    public SkyServiceException(ResultCodeType resultCode) {
         super(resultCode.getDescription());
         this.resultCode = resultCode;
     }
